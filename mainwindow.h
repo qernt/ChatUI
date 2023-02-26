@@ -25,10 +25,12 @@ private slots:
 
     void write_text_to_chat_history_like_a_server_sending();
 
-public slots:
+public:
     std::string messege_to_send();
     void send_messege_like_a_server();
     void write_text_to_chat_history_reciving(std::string messege);
+    void set_settings_server();
+    void recive_messege_like_a_server();
 
 private:
     Ui::MainWindow *ui;

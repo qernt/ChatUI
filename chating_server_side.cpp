@@ -1,15 +1,10 @@
 #include "mainwindow.h"
 #include "setting.h"
 
-int clientSocket = 0;
-int serverSocket = 0;
-
-void set_settings_server(int client, int server)
+void MainWindow::set_settings_server()
 {
-    clientSocket = client;
-    serverSocket = server;
-    //std::thread t1(&MainWindow::recive_messege_like_a_server,this);
-    //t1.detach();
+    std::thread t1(&MainWindow::recive_messege_like_a_server,this);
+    t1.detach();
 }
 
 void MainWindow::send_messege_like_a_server()
@@ -27,7 +22,7 @@ void MainWindow::send_messege_like_a_server()
     }
 }
 
-/*void MainWindow::recive_messege_like_a_server()
+void MainWindow::recive_messege_like_a_server()
 {
     while(true)
         {
@@ -44,4 +39,4 @@ void MainWindow::send_messege_like_a_server()
                 memset(buffer, 0, sizeof(buffer));
             }
         }
-}*/
+}

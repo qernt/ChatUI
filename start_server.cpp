@@ -1,8 +1,9 @@
 #include "setting.h"
 
+int serverSocket;
+
 void setting::create_server(int serverPort)
 {
-    int serverSocket;
     serverSocket = socket(AF_INET, SOCK_STREAM, 0);
     if(serverSocket == -1)
     {
@@ -28,5 +29,5 @@ void setting::create_server(int serverPort)
     }
     show_status_of_connection("Server is running");
     statusOfConnection = 1;
-    client_connecting(serverSocket);
+    client_connecting();
 }

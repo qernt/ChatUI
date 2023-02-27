@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "setting.h"
-#include <QThread>
 
 std::string username = "";
 
@@ -16,8 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     settingWindow = new setting();
 
-    std::thread t(&MainWindow::recive_messege_like_a_server, this);
-    t.detach();
+    std::thread t1(&MainWindow::recive_messege_like_a_server, this);
+    std::thread t2(&MainWindow::recive_messege_like_a_client, this);
+    t1.detach();
+    t2.detach();
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +41,8 @@ void MainWindow::on_pushButton_send_messege_clicked()
         send_messege_like_a_server();
     }else if(statusOfConnection == 3)
     {
-
+        write_text_to_chat_history_like_a_server_sending();
+        send_messege_like_a_client();
     }
 }
 
@@ -77,4 +79,9 @@ void MainWindow::write_text_to_chat_history_reciving(std::string messege)
     {
         ui->plainTextEdit_chat_history->setPlainText(QString::fromStdString(ui->plainTextEdit_chat_history->toPlainText().toStdString() + messege + "\n"));
     }
+}
+
+void MainWindow::chat_notification(std::string notification)
+{
+    ui->plainTextEdit_chat_history->setPlainText(QString::fromStdString(ui->plainTextEdit_chat_history->toPlainText().toStdString() + notification + "\n"));
 }

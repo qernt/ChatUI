@@ -1,9 +1,11 @@
 #include "setting.h"
 #include "mainwindow.h"
 
+int userSocket = 0;
+
 void connect_to_server(std::string ipAdress,int portNumber)
 {
-    int userSocket = socket(AF_INET, SOCK_STREAM, 0);
+    userSocket = socket(AF_INET, SOCK_STREAM, 0);
     if(userSocket == -1)
     {
         std::cerr << "Error of creatig socket" << std::endl;

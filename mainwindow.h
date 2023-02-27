@@ -31,7 +31,10 @@ public:
     Q_INVOKABLE void write_text_to_chat_history_reciving(std::string messege);
     void set_settings_server();
     void recive_messege_like_a_server();
+    void recive_messege_like_a_client();
+    Q_INVOKABLE void chat_notification(std::string notification);
     void start_server_settings();
+    void send_messege_like_a_client();
 
 
 private:

@@ -24,9 +24,6 @@ class setting : public QDialog
 {
     Q_OBJECT
 
-    //ClassB(ClassA* ptr) : ptr_(ptr) {}
-    //setting(MainWindow* mainWindow) : mainWindow_(mainWindow) {}
-
 public:
     explicit setting(QWidget *parent = nullptr);
     ~setting();
@@ -57,5 +54,7 @@ void connect_to_server(std::string ipAdress,int portNumber);
 
 extern int clientSocket;
 extern int serverSocket;
+
+extern int userSocket;
 
 #endif // SETTING_H

@@ -22,14 +22,17 @@ void MainWindow::recive_messege_like_a_server()
     while(true)
     {
         if(statusOfConnection == 2){
-            int bytesReceived = recv(clientSocket, buffer, 1024, 0);
-            if (bytesReceived < 0)
+            int bytesRecived = recv(clientSocket, buffer, 1024, 0);
+            if (bytesRecived < 0)
             {
                 std::cerr << "Error: " << strerror(errno) << std::endl;
-            }else if (bytesReceived == 0)
+            }else if (bytesRecived == 0)
             {
                 std::cout << "Client disconnected " << std::endl;
-                //clientConnecting(serverSocket);
+                std::string notification = "/*Client disconnected*/";
+                QMetaObject::invokeMethod(this, "chat_notification", Qt::QueuedConnection, Q_ARG(std::string, notification));
+                client_connecting();
+                statusOfConnection = 1;
             }else
             {
                 std::cout<<"recived"<<std::endl;
@@ -37,7 +40,5 @@ void MainWindow::recive_messege_like_a_server()
             }
             memset(buffer, 0, sizeof(buffer));
         }
-
     }
-
 }

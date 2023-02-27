@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "setting.h"
+#include <QThread>
 
 std::string username = "";
 
@@ -8,10 +10,14 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    qRegisterMetaType<std::string>("std::string");
 
     ui->plainTextEdit_chat_history->setReadOnly(true);
 
     settingWindow = new setting();
+
+    std::thread t(&MainWindow::recive_messege_like_a_server, this);
+    t.detach();
 }
 
 MainWindow::~MainWindow()

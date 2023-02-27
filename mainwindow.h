@@ -28,15 +28,18 @@ private slots:
 public:
     std::string messege_to_send();
     void send_messege_like_a_server();
-    void write_text_to_chat_history_reciving(std::string messege);
+    Q_INVOKABLE void write_text_to_chat_history_reciving(std::string messege);
     void set_settings_server();
     void recive_messege_like_a_server();
+    void start_server_settings();
+
 
 private:
     Ui::MainWindow *ui;
     setting* settingWindow;
 
 };
+
 
 extern std::string username;
 

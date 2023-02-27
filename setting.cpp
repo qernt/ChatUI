@@ -10,9 +10,9 @@ setting::setting(QWidget *parent) :
     ui->setupUi(this);
 
     ui->label_host_ip->setText(callIp());
-    int statusOfConnection = 0;
-}
+    statusOfConnection = 0;
 
+}
 
 setting::~setting()
 {

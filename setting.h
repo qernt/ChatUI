@@ -24,6 +24,9 @@ class setting : public QDialog
 {
     Q_OBJECT
 
+    //ClassB(ClassA* ptr) : ptr_(ptr) {}
+    //setting(MainWindow* mainWindow) : mainWindow_(mainWindow) {}
+
 public:
     explicit setting(QWidget *parent = nullptr);
     ~setting();
@@ -39,6 +42,8 @@ private slots:
 
 private:
     Ui::setting *ui;
+
+
 };
 
 extern int statusOfConnection;
@@ -46,10 +51,9 @@ extern int statusOfConnection;
 QString callIp();
 
 void client_connecting();
-void accept_connections(int serverSocket,sockaddr_in clientAdress,socklen_t clientAdressSize);
-void client_connecting(int serverSocket);
+void accept_connections(sockaddr_in clientAdress,socklen_t clientAdressSize);
+void client_connecting();
 void connect_to_server(std::string ipAdress,int portNumber);
-void set_settings_server();
 
 extern int clientSocket;
 extern int serverSocket;

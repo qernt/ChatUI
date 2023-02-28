@@ -37,11 +37,11 @@ void MainWindow::on_pushButton_send_messege_clicked()
 {
     if(statusOfConnection == 2)
     {
-        write_text_to_chat_history_like_a_server_sending();
+        write_text_to_chat_history_sending();
         send_messege_like_a_server();
     }else if(statusOfConnection == 3)
     {
-        write_text_to_chat_history_like_a_server_sending();
+        write_text_to_chat_history_sending();
         send_messege_like_a_client();
     }
 }
@@ -59,7 +59,7 @@ void MainWindow::on_pushButton_set_username_clicked()
     username = ui->plainTextEdit_2->toPlainText().toStdString();
 }
 
-void MainWindow::write_text_to_chat_history_like_a_server_sending()
+void MainWindow::write_text_to_chat_history_sending()
 {
     if(ui->plainTextEdit_chat_history->toPlainText() == "")
     {

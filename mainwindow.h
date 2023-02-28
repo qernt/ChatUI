@@ -23,7 +23,7 @@ private slots:
 
     void on_pushButton_set_username_clicked();
 
-    void write_text_to_chat_history_like_a_server_sending();
+    void write_text_to_chat_history_sending();
 
 public:
     std::string messege_to_send();

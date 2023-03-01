@@ -28,6 +28,6 @@ void setting::create_server(int serverPort)
         return;
     }
     show_status_of_connection("Server is running");
-    statusOfConnection = 1;
+    statusOfConnection = 2;
     client_connecting();
 }

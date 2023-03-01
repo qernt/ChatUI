@@ -23,7 +23,7 @@ void connect_to_server(std::string ipAdress,int portNumber)
         return;
     }else
     {
-        statusOfConnection = 3;
+        statusOfConnection = 4;
         std::cout << "was connected" << std::endl;
     }
 }

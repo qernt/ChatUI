@@ -6,160 +6,167 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>298</height>
+    <width>479</width>
+    <height>214</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label_ip_to_connect">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>40</y>
-     <width>58</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>IP</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_port_to_connect">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>58</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Port</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_connect">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>210</y>
-     <width>100</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Connect</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_disconnect">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>210</y>
-     <width>100</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Disconnect</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_your_ip">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>40</y>
-     <width>58</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Your IP</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_host_ip">
-   <property name="geometry">
-    <rect>
-     <x>440</x>
-     <y>40</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0.0.0.0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_host_port">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>90</y>
-     <width>58</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Port</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_host_port">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>80</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_start_server">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>210</y>
-     <width>100</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Start Server</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_server_status">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>230</y>
-     <width>171</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextTextText</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_port_to_connect">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>80</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit_ip_to_connect">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>30</y>
-     <width>191</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_ip_to_connect">
+     <property name="text">
+      <string>IP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="4">
+    <widget class="QLabel" name="label_server_status">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QPushButton" name="pushButton_start_server">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Start server</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QLabel" name="label_your_ip">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Your IP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_port_to_connect">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Port</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="pushButton_connect">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="label_host_port">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Port</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" colspan="2">
+    <widget class="QLabel" name="label_host_ip">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>0.0.0.0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEdit_ip_to_connect">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEdit_port_to_connect">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="lineEdit_host_port">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

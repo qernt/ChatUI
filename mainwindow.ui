@@ -7,84 +7,151 @@
     <x>0</x>
     <y>0</y>
     <width>440</width>
-    <height>529</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_go_to_settings">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>470</y>
-      <width>41</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_send_messege">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>470</y>
-      <width>100</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit_chat_history">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>421</width>
-      <height>391</height>
+      <width>420</width>
+      <height>420</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>420</width>
+      <height>420</height>
+     </size>
     </property>
     <property name="plainText">
      <string/>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_messege">
+   <widget class="QLineEdit" name="lineEdit_messege">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>410</y>
-      <width>421</width>
-      <height>61</height>
+      <y>440</y>
+      <width>420</width>
+      <height>31</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>420</width>
+      <height>40</height>
+     </size>
+    </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>480</y>
-      <width>161</width>
-      <height>31</height>
+      <width>421</width>
+      <height>51</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_set_username">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>470</y>
-      <width>31</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0,0,0">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_username">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_set_username">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_go_to_settings">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_send_messege">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>

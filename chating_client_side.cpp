@@ -21,7 +21,7 @@ void MainWindow::recive_messege_like_a_client()
     char buffer[1024] = {0};
     while(true)
     {
-        if(statusOfConnection == 3)
+        if(statusOfConnection == 4)
         {
             int bytesRecived = recv(userSocket, buffer, 1024, 0);
             if (bytesRecived < 0)

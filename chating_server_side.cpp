@@ -21,7 +21,7 @@ void MainWindow::recive_messege_like_a_server()
     char buffer[1024] = {0};
     while(true)
     {
-        if(statusOfConnection == 2){
+        if(statusOfConnection == 3){
             int bytesRecived = recv(clientSocket, buffer, 1024, 0);
             if (bytesRecived < 0)
             {

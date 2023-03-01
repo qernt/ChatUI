@@ -43,7 +43,11 @@ private:
 
 };
 
-extern int statusOfConnection;
+extern int statusOfConnection; // 0 - username is not set up
+                               // 1 - (server - server not started)(client - no connection to server)
+                               // 2 - (server - server is started but client is not connected)
+                               // 3 - (server - server is started and client is connected)
+                               // 4 - (client - is connected to server)
 
 QString callIp();
 

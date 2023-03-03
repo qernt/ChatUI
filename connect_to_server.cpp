@@ -3,7 +3,7 @@
 
 int userSocket = 0;
 
-void connect_to_server(std::string ipAdress,int portNumber)
+void setting::connect_to_server(std::string ipAdress,int portNumber)
 {
     userSocket = socket(AF_INET, SOCK_STREAM, 0);
     if(userSocket == -1)
@@ -17,13 +17,13 @@ void connect_to_server(std::string ipAdress,int portNumber)
     serverAdress.sin_addr.s_addr = inet_addr(ipAdress.c_str());
     serverAdress.sin_port = htons(portNumber);
 
-    if(connect(userSocket, (sockaddr*)&serverAdress, sizeof(serverAdress)) < 0)
+    if(::connect(userSocket, (sockaddr*)&serverAdress, sizeof(serverAdress)) < 0)
     {
         std::cout << "Error" << std::endl;
         return;
     }else
     {
         statusOfConnection = 4;
-        std::cout << "was connected" << std::endl;
+        show_status_of_connection("Have been connected");
     }
 }

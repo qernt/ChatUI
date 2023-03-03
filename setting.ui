@@ -14,6 +14,16 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEdit_port_to_connect">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_ip_to_connect">
      <property name="text">
@@ -21,27 +31,18 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="4">
-    <widget class="QLabel" name="label_server_status">
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEdit_username">
      <property name="maximumSize">
       <size>
-       <width>16777215</width>
-       <height>25</height>
+       <width>150</width>
+       <height>30</height>
       </size>
-     </property>
-     <property name="text">
-      <string/>
      </property>
     </widget>
    </item>
-   <item row="3" column="3">
-    <widget class="QPushButton" name="pushButton_start_server">
-     <property name="minimumSize">
-      <size>
-       <width>150</width>
-       <height>50</height>
-      </size>
-     </property>
+   <item row="0" column="3">
+    <widget class="QPushButton" name="pushButton_set_username">
      <property name="maximumSize">
       <size>
        <width>200</width>
@@ -49,7 +50,7 @@
       </size>
      </property>
      <property name="text">
-      <string>Start server</string>
+      <string>Set username</string>
      </property>
     </widget>
    </item>
@@ -66,22 +67,43 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_port_to_connect">
-     <property name="minimumSize">
-      <size>
-       <width>50</width>
-       <height>0</height>
-      </size>
-     </property>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEdit_ip_to_connect">
      <property name="maximumSize">
       <size>
-       <width>50</width>
-       <height>16777215</height>
+       <width>150</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>username</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3" colspan="2">
+    <widget class="QLabel" name="label_host_ip">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
       </size>
      </property>
      <property name="text">
-      <string>Port</string>
+      <string>0.0.0.0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="lineEdit_host_port">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
    </item>
@@ -110,6 +132,25 @@
      </property>
     </widget>
    </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_port_to_connect">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Port</string>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="2">
     <widget class="QLabel" name="label_host_port">
      <property name="minimumSize">
@@ -123,46 +164,35 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="3" colspan="2">
-    <widget class="QLabel" name="label_host_ip">
+   <item row="3" column="3">
+    <widget class="QPushButton" name="pushButton_start_server">
+     <property name="minimumSize">
+      <size>
+       <width>150</width>
+       <height>50</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
-       <width>16777215</width>
+       <width>200</width>
        <height>50</height>
       </size>
      </property>
      <property name="text">
-      <string>0.0.0.0</string>
+      <string>Start server</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QLineEdit" name="lineEdit_ip_to_connect">
+   <item row="4" column="1" colspan="3">
+    <widget class="QLabel" name="label_server_status">
      <property name="maximumSize">
       <size>
-       <width>150</width>
+       <width>400</width>
        <height>30</height>
       </size>
      </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QLineEdit" name="lineEdit_port_to_connect">
-     <property name="maximumSize">
-      <size>
-       <width>150</width>
-       <height>30</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="3">
-    <widget class="QLineEdit" name="lineEdit_host_port">
-     <property name="maximumSize">
-      <size>
-       <width>150</width>
-       <height>30</height>
-      </size>
+     <property name="text">
+      <string>No seted up username</string>
      </property>
     </widget>
    </item>

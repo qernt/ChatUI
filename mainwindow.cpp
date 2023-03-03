@@ -3,8 +3,6 @@
 #include "setting.h"
 #include "QMessageBox"
 
-std::string username = "";
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -12,13 +10,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     qRegisterMetaType<std::string>("std::string");
 
-    this->setFixedSize(440,550);
+    this->setFixedSize(440,540);
     this->setWindowTitle("Chat");
 
     ui->plainTextEdit_chat_history->setReadOnly(true);
 
     ui->lineEdit_messege->setPlaceholderText("messege");
-    ui->lineEdit_username->setPlaceholderText("username");
 
     settingWindow = new setting();
 
@@ -73,13 +70,6 @@ std::string MainWindow::messege_to_send()
     messege = ui->lineEdit_messege->text().toStdString();
     ui->lineEdit_messege->setText("");
     return messege;
-}
-
-void MainWindow::on_pushButton_set_username_clicked()
-{
-    username = ui->lineEdit_username->text().toStdString();
-    if(statusOfConnection == 0)
-        statusOfConnection = 1;
 }
 
 void MainWindow::write_text_to_chat_history_sending()

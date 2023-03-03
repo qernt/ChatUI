@@ -32,10 +32,18 @@ public:
 
     void create_server(int serverPort);
 
+    void connect_to_server(std::string ipAdress,int portNumber);
+
+    void deactivate_poles();
+
+    void activate_poles();
+
 private slots:
     void on_pushButton_start_server_clicked();
 
     void on_pushButton_connect_clicked();
+
+    void on_pushButton_set_username_clicked();
 
 private:
     Ui::setting *ui;
@@ -43,6 +51,7 @@ private:
 
 };
 
+extern int statusOfConnectionForCheck;
 extern int statusOfConnection; // 0 - username is not set up
                                // 1 - (server - server not started)(client - no connection to server)
                                // 2 - (server - server is started but client is not connected)
@@ -54,11 +63,11 @@ QString callIp();
 void client_connecting();
 void accept_connections(sockaddr_in clientAdress,socklen_t clientAdressSize);
 void client_connecting();
-void connect_to_server(std::string ipAdress,int portNumber);
 
 extern int clientSocket;
 extern int serverSocket;
-
 extern int userSocket;
+
+extern std::string username;
 
 #endif // SETTING_H

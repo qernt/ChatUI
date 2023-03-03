@@ -21,8 +21,6 @@ private slots:
 
     void on_pushButton_send_messege_clicked();
 
-    void on_pushButton_set_username_clicked();
-
     void write_text_to_chat_history_sending();
 
 public:
@@ -42,8 +40,5 @@ private:
     setting* settingWindow;
 
 };
-
-
-extern std::string username;
 
 #endif // MAINWINDOW_H

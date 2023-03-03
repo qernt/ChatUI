@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "setting.h"
 #include "QMessageBox"
+#include <QScrollBar>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -74,13 +76,15 @@ std::string MainWindow::messege_to_send()
 
 void MainWindow::write_text_to_chat_history_sending()
 {
-    if(ui->plainTextEdit_chat_history->toPlainText() == "")
+    if(ui->plainTextEdit_chat_history->toPlainText() == "" && ui->lineEdit_messege->text().toStdString() != "")
     {
         ui->plainTextEdit_chat_history->setPlainText(QString::fromStdString(username + ": " + ui->lineEdit_messege->text().toStdString() + "\n"));
-    }else
+    }else if(ui->lineEdit_messege->text().toStdString() != "")
     {
         ui->plainTextEdit_chat_history->setPlainText(QString::fromStdString(ui->plainTextEdit_chat_history->toPlainText().toStdString() + username + ": " + ui->lineEdit_messege->text().toStdString() + "\n"));
     }
+    QScrollBar* scrollBar = ui->plainTextEdit_chat_history->verticalScrollBar();
+    scrollBar->setValue(scrollBar->maximum());
 }
 
 void MainWindow::write_text_to_chat_history_reciving(std::string messege)
@@ -92,6 +96,8 @@ void MainWindow::write_text_to_chat_history_reciving(std::string messege)
     {
         ui->plainTextEdit_chat_history->setPlainText(QString::fromStdString(ui->plainTextEdit_chat_history->toPlainText().toStdString() + messege + "\n"));
     }
+    QScrollBar* scrollBar = ui->plainTextEdit_chat_history->verticalScrollBar();
+    scrollBar->setValue(scrollBar->maximum());
 }
 
 void MainWindow::chat_notification(std::string notification)

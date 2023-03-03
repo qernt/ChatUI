@@ -40,8 +40,6 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPlainTextEdit{
-	padding-left: 5px;
-	padding-top: 5px;
 	border-radius: 0px;
 }</string>
     </property>

@@ -12,7 +12,7 @@ setting::setting(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    this->setFixedSize(500, 210);
+    this->setFixedSize(240, 400);
     this->setWindowTitle("Settings");
 
     ui->lineEdit_ip_to_connect->setInputMask("000.000.000.000;");

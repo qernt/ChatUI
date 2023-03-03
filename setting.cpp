@@ -55,12 +55,12 @@ void setting::on_pushButton_set_username_clicked()
 {
     std::string oldUsername = username;
     username = ui->lineEdit_username->text().toStdString();
-    if(statusOfConnection == 0 && username != "")
+    if(username != "")
     {
         statusOfConnection = 1;
         show_status_of_connection("Username has been set up");
         activate_poles();
-    }else if(username != "" && username != oldUsername)
+    }else if(username != oldUsername && username != "")
     {
         show_status_of_connection("Username has been changed");
     }
@@ -81,11 +81,15 @@ void setting::deactivate_poles()
 
 void setting::activate_poles()
 {
-    ui->lineEdit_ip_to_connect->setReadOnly(false);
-    ui->lineEdit_host_port->setReadOnly(false);
-    ui->lineEdit_port_to_connect->setReadOnly(false);
-    ui->pushButton_connect->setEnabled(true);
-    ui->pushButton_start_server->setEnabled(true);
+    if(statusOfConnection == 1)
+    {
+        ui->lineEdit_ip_to_connect->setReadOnly(false);
+        ui->lineEdit_host_port->setReadOnly(false);
+        ui->lineEdit_port_to_connect->setReadOnly(false);
+        ui->pushButton_connect->setEnabled(true);
+        ui->pushButton_start_server->setEnabled(true);
+    }
+
 }
 
 

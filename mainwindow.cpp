@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     qRegisterMetaType<std::string>("std::string");
 
-    this->setFixedSize(440,540);
+    this->setFixedSize(320,540);
     this->setWindowTitle("Chat");
 
     ui->plainTextEdit_chat_history->setReadOnly(true);
